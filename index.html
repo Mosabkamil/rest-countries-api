@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./tailwind.config.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+      <style>
+    .dark-mode {
+      background-color: #1a202c; /* Tailwind dark background color */
+      color: #a0aec0; /* Tailwind dark text color */
+    }
+  </style>
+  </head>
+  <body class="font-Nunito bg-Light_Gray">
+    <header>
+      <nav class="py-5 shadow">
+        <div
+          class="container flex px-4 md:p-0 mx-auto items-center justify-between"
+        >
+          <div class="font-bold">Where in the World?</div>
+          <div class="flex items-center space-x-3">
+            <img
+              id="darkModeToggle"
+              class="w-5 h-5"
+              src="./img/moon-regular.svg"
+              alt="Dark_mode"
+            />
+            <span> Dark Mode </span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <div
+        class="container mx-auto px-4 mt-6 flex flex-col md:flex-row md:px-0 justify-between items-start"
+      >
+        <form class="w-full md:w-1/2">
+          <div class="flex items-center align-top relative">
+            <input
+              class="w-full shadow p-2 pl-16 font-Nunito text-Dark_Gray rounded-md"
+              type="text"
+              placeholder="search for a country"
+            />
+            <img
+              class="w-4 h-4 absolute left-5"
+              src="./img/magnifying-glass-solid.svg"
+              alt=""
+            />
+          </div>
+        </form>
+        <!-- component -->
+        <div class="group mt-12 min-w-32 space-y-1 md:mt-0">
+          <button
+            class="outline-none bg-white focus:outline-none border px-12 py-3 shadow space-x-7 rounded-sm flex items-center"
+          >
+            <span class="text-sm">Filter by Region</span>
+            <span>
+              <svg
+                class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-150 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                />
+              </svg>
+            </span>
+          </button>
+          <ul
+            class="border bg-white rounded-sm w-60 shadow-lg transform scale-0 group-hover:scale-100 transition duration-150 ease-in-out"
+          >
+            <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Africa</li>
+            <li class="rounded-sm px-3 py-1 hover:bg-gray-100">America</li>
+            <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Asia</li>
+            <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Europe</li>
+            <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Oceania</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div
+        class="container mx-auto flex flex-wrap justify-center -mt-32 w-full gap-5 md:justify-between"
+      >
+       
+        <!-- card 4 -->
+        <div
+          class="card w-64 md:w-56 bg-white rounded-md overflow-hidden shadow-lg"
+        >
+          <img
+            class="w-full"
+            src="https://tailwindcss.com/img/card-top.jpg"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Germany</div>
+            <div class="flex items-center space-x-1">
+              <div class="flex flex-col">
+                <div><span> Population: </span> <span> 81.770900 </span></div>
+                <div><span> Region: </span> <span> Europe </span></div>
+                <div><span> Capital:</span> <span> Berlin </span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <script src="/index.js"></script>
+  </body>
+</html>
